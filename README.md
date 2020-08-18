@@ -8,7 +8,9 @@ This is a bare-bones implementation in Python3. I was surprised by some of the r
 
 ## Strategies
 
-The difference in these trials is in what the players do when picking up their cards. The `random` strategy shuffles the cards when picking up. `sort` orders the cards from low-to-high, `revsort` orders from high-to-low.
+The difference in these trials is in what the players do when picking up their cards. This isn't an explicit part of the game, but if there are two cards on the table, they will be picked up in _some_ order, even if unintentionally. When playing in real life, I've never thought about the pick-up order, but a machine implementation needed to do something with the cards. This all came about because I wasn't happy with the runtime performance of shuffling the cards so I tried sorting. The median turn counts dropped, and here we are.
+
+The `random` strategy shuffles the cards when picking up. `sort` orders the cards from low-to-high, `revsort` orders from high-to-low.
 
 ## Results and Interpretations
 
